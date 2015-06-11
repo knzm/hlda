@@ -4,7 +4,7 @@ CC= gcc
 CFLAGS_MAC = -g -Wall -O3 -DHAVE_INLINE -DGSL_RANGE_CHECK_OFF -Winline -fast -I/opt/local/include/gsl
 CFLAGS_PTON = -g -Wall -O3 -DHAVE_INLINE=1 -DGSL_RANGE_CHECK_OFF=1
 CFLAGS_DEBUG = -g -Wall
-CFLAGS = -g -Wall -I/opt/local/include/gsl/ -I/usr/include/sys/ -I/usr/include/
+CFLAGS = -g -Wall -Wno-format-security -I/opt/local/include/gsl/
 
 # MAC_LDFLAGS = -lgsl -latlas -lcblas -L/sw/li
 MAC_LDFLAGS = -lgsl -lgslcblas -L/opt/local/lib
